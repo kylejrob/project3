@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 const startState = { autoAlpha: 0, y: -50 };
 
 
-export const Scores = props => <Transition
+export const Login = props => <Transition
 	unmountOnExit
 	in={props.show}
 	timeout={1000}

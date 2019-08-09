@@ -25,7 +25,7 @@ export const Home = props => <Transition
       <a href="/" className="Logo">PROJECT3</a>
       <nav>
           <ul>
-              <li><Link className="btn gsap-btn" to="/">Home</Link></li>
+              <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
               <li><Link className="btn gsap-btn" to="/game">Game</Link></li>
               <li><Link className="btn gsap-btn" to="/scores">High Scores</Link></li>
           </ul>
