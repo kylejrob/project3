@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 // components
-import { Home, Services, Contact } from "./components";
+import { Home } from "./components/home/home.js";
+import { Game } from "./components/game/game.js";
+import { Scores } from "./components/scores/scores.js";
 import './style.css'
 
 class Routes extends Component {
@@ -24,11 +26,11 @@ class Routes extends Component {
 						</Route>
 						
 						<Route path="/game">
-							{ ({ match }) => <Services show={match !== null} /> }
+							{ ({ match }) => <Game show={match !== null} /> }
 						</Route>
 						<Route path="/scores">
-							{ ({ match }) => <Contact show={match !== null} /> }
-						</Route>
+							{ ({ match }) => <Scores show={match !== null} /> }
+						</Route> 
 					</div>
 
 				</div>
