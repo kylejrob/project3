@@ -31,6 +31,8 @@ export const Home = props => <Transition
       </nav>
   </header>
 
+{/* THIS IS THE CODE IN THE MAIN PANEL */}
+
   <div className="wrapper">
       <section className="hero">
           <div className="inner">
@@ -46,11 +48,14 @@ export const Home = props => <Transition
   </label>
   <input type="submit" value="Submit" />
 </form>
-		  <Link className="btn gsap-btn read-btn primary" to="/game">Play now</Link>
+		  <Link className="btn gsap-btn read-btn primary" to="/game" onClick="">Create Account</Link>
 		  
       </div>
       </div>
   </section>
+
+{/* THIS IS ALL THE CODE IN THE ASIDE */}
+
   <section className="siderbar">
       <div className="inner">
           <div className="clipper">
