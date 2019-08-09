@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route} from "react-router-dom";
 // components
-import { Home } from "./components/Pages/home/home";
-import { Game } from "./components/Pages/game/game";
-import { Scores } from "./components/Pages/scores/scores.js";
-import { Login } from "./components/Pages/login/login";
+import { Home } from "./components/Pages/home/Home";
+import { Game } from "./components/Pages/game/Game";
+import { Scores } from "./components/Pages/scores/Scores.js";
+import Navbar from "./components/Navbar";
 import './style.css'
 
 
@@ -14,10 +14,15 @@ class App extends Component {
 
   render() {
     return (
+		<div>
+			
       <div className='container'>
 			<BrowserRouter>
 				<div className="row">
 
+		<Navbar 
+
+		/>
 					{/* MENU */}
 					
 				
@@ -25,11 +30,7 @@ class App extends Component {
 					{/* CONTENT */}
 					<div className="col-12">
 
-						<Route path="/" exact>
-							{ ({ match }) => <Login show={match !== null} /> }
-						</Route>
-
-						<Route path="/home" exact>
+						<Route exact path="/" exact>
 							{ ({ match }) => <Home show={match !== null} /> }
 						</Route>
 						
@@ -43,6 +44,7 @@ class App extends Component {
 
 				</div>
 			</BrowserRouter>      </div>
+		</div>
     );
   }
 }
