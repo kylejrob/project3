@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import { Home } from "../components/home/home";
 import { Game } from "../components/game/game.js";
 import { Scores } from "../components/scores/scores.js";
+import { Login } from "../components/login/login";
 import '../style.css'
 
 class Routes extends Component {
@@ -21,7 +22,12 @@ class Routes extends Component {
 
 					{/* CONTENT */}
 					<div className="col-12">
+
 						<Route path="/" exact>
+							{ ({ match }) => <Login show={match !== null} /> }
+						</Route>
+
+						<Route path="/home" exact>
 							{ ({ match }) => <Home show={match !== null} /> }
 						</Route>
 						
