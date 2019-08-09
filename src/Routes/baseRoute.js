@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 // components
-import { Home } from "./components/home/home.js";
-import { Game } from "./components/game/game.js";
-import { Scores } from "./components/scores/scores.js";
-import './style.css'
+import { Home } from "../components/home/home";
+import { Game } from "../components/game/game.js";
+import { Scores } from "../components/scores/scores.js";
+import '../style.css'
 
 class Routes extends Component {
 
