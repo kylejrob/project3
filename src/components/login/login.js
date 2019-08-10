@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 const startState = { autoAlpha: 0, y: -50 };
 
 
-export const Scores = props => <Transition
+export const Login = props => <Transition
 	unmountOnExit
 	in={props.show}
 	timeout={1000}
@@ -24,7 +24,7 @@ export const Scores = props => <Transition
 >	
 <div>
     <header>
-      <a href="/" className="Logo">High Score Page</a>
+      <a href="/" className="Logo">Log-in page</a>
       <nav>
           <ul>
               <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
