@@ -24,7 +24,7 @@ export const Scores = props => <Transition
 >	
 <div>
     <header>
-      <a href="/" className="Logo">PROJECT3</a>
+      <a href="/" className="Logo">High Score Page</a>
       <nav>
           <ul>
               <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
