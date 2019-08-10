@@ -7,7 +7,6 @@ import SignUp from "../home/components/SignUp";
 import { homedir } from "os";
 
 
-
 const startState = { autoAlpha: 0, y: -50 };
 export class Home extends Component {
 	constructor(props) {
@@ -44,24 +43,16 @@ export class Home extends Component {
     }}
 >
     <div>
-        <header>
-            <a href="/" className="Logo">PROJECT3</a>
-    
-            <nav>
-                <ul>
-                    <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
-                    <li><Link className="btn gsap-btn" to="/game">Game</Link></li>
-                    <li><Link className="btn gsap-btn" to="/scores">High Scores</Link></li>
-                </ul>
-            </nav>
-        </header>
+        
 
         {/* THIS IS THE CODE IN THE MAIN PANEL */}
 
         <div className="wrapper">
             <section className="hero">
                 <div className="inner">
-                    <Login />
+                    {this.state.modalDisplay ? 
+                    <SignUp /> :
+                    <Login openSignup={this.openSignup} />}
                 </div>
             </section>
 

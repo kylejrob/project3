@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import { Button } from 'reactstrap'
 
 class LoginForm extends Component {
     constructor() {
@@ -57,7 +58,6 @@ class LoginForm extends Component {
         } else {
             return (
                 <div>
-                    <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">
                             <div className="col-1 col-ml-auto">
@@ -95,6 +95,7 @@ class LoginForm extends Component {
                                
                                 onClick={this.handleSubmit}
                                 type="submit">Login</button>
+                                    <Button color="primary" size="lg" onClick={this.props.openSignup}>Create Account</Button>{' '}
                         </div>
                     </form>
                 </div>

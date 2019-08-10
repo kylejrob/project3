@@ -114,6 +114,7 @@ render() {
 					type="text"
 					id="username" 
 					placeholder="Username" 
+					label="Username"
 					name="username"
 					value={this.state.username}
 					onChange={this.handleChange} 
@@ -122,6 +123,7 @@ render() {
 					type="password"
 					id="password"
 					placeholder="Password"
+					label="Password"
 					name="password"
 					value={this.state.password}
 					onChange={this.handleChange}
