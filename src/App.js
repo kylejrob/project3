@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route} from "react-router-dom";
 // components
-import { Home } from "./components/Pages/home/Home";
-import { Game } from "./components/Pages/game/Game";
-import { Scores } from "./components/Pages/scores/Scores.js";
+import { Home } from "./components/Pages/home/home";
+import { Game } from "./components/Pages/game/game";
+import { Scores } from "./components/Pages/scores/scores.js";
 import Navbar from "./components/Navbar";
 import './style.css'
 
