@@ -30,7 +30,7 @@ class App extends Component {
 					{/* CONTENT */}
 					<div className="col-12">
 
-						<Route exact path="/" exact>
+						<Route exact path="/" >
 							{ ({ match }) => <Home show={match !== null} /> }
 						</Route>
 						

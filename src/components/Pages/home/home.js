@@ -1,21 +1,44 @@
-import React from "react";
+import React, { Component } from 'react'
 import { Transition } from "react-transition-group";
 import { TweenMax } from "gsap/all";
 import { Link } from "react-router-dom";
 import Login from "../home/components/LogIn";
+import SignUp from "../home/components/SignUp";
+import { homedir } from "os";
+
 
 
 const startState = { autoAlpha: 0, y: -50 };
+export class Home extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+            show: props.show,
+			modalDisplay: false,
+			
 
-export const Home = props => <Transition
+		}
+	
+	}
+    
+    openSignup = event => {
+		event.preventDefault()
+		this.setState({
+			modalDisplay: true
+		})
+    } 
+   render(){
+ return(  
+
+<Transition
     unmountOnExit
-    in={props.show}
+    in={this.state.show}
     timeout={1000}
     onEnter={node => TweenMax.set(node, startState)}
     addEndListener={(node, done) => {
         TweenMax.to(node, 0.5, {
-            autoAlpha: props.show ? 1 : 0,
-            y: props.show ? 0 : 50,
+            autoAlpha: this.state.show ? 1 : 0,
+            y: this.state.show ? 0 : 50,
             onComplete: done
         });
     }}
@@ -23,6 +46,7 @@ export const Home = props => <Transition
     <div>
         <header>
             <a href="/" className="Logo">PROJECT3</a>
+    
             <nav>
                 <ul>
                     <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
@@ -37,7 +61,7 @@ export const Home = props => <Transition
         <div className="wrapper">
             <section className="hero">
                 <div className="inner">
-                    <Login/>
+                    <Login />
                 </div>
             </section>
 
@@ -69,4 +93,5 @@ export const Home = props => <Transition
             </section>
         </div>
     </div>
-</Transition>;
+</Transition>)}}
+

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import Input from './form/Input'
-import SubmitButton from "./form/SubmitButton"
+import Input from '../../../Form/Input';
+import SubmitButton from "../../../Form/Button"
 import MyModal from '../../../Form/MyModal'
 
 class Signup extends Component {
@@ -28,7 +28,7 @@ class Signup extends Component {
 		})
 	}
 	closeModal = event => {
-		event.preventDefault
+		event.preventDefault()
 		this.setState({
 			modalDisplay: false
 		})
