@@ -7,6 +7,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.patch {
+  position: absolute;
+  bottom: 400px;
+  left: 80px;
+}
+
 header {
   position: absolute;
   padding: 1em;
@@ -123,6 +129,10 @@ header nav ul li a {
 
 .wrapper section.subscribe {
   background-color: #da7f18;
+}
+
+.wrapper section.subscribe a {
+  color: white;
 }
 
 .wrapper section.subscribe input {

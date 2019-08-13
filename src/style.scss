@@ -12,6 +12,11 @@ body {
     //display: none;
 }
 
+.patch {
+    position: absolute;
+    bottom: 400px;
+    left: 80px;
+}
 
 header {
     position: absolute;
@@ -21,6 +26,7 @@ header {
     justify-content: space-between;
     width: calc(100% - 2em);
     background: white;
+
 
     a {
         text-decoration: none;
@@ -123,7 +129,11 @@ header {
         section.subscribe {
 
             background-color: rgb(218, 127, 24);
-    
+            
+            a {
+                color: white;
+            }
+
             input {
                 width: calc(100% - 2em);
                 padding: 1em;

@@ -21,22 +21,13 @@ export const Home = props => <Transition
 	}}
 >
 <div>
-    <header>
-      <a href="/" className="Logo">Home Page</a>
-      <nav>
-          <ul>
-              <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
-              <li><Link className="btn gsap-btn" to="/game">Game</Link></li>
-              <li><Link className="btn gsap-btn" to="/scores">High Scores</Link></li>
-          </ul>
-      </nav>
-  </header>
+    
 
   <div className="wrapper">
       <section className="hero">
           <div className="inner">
               <div className="clipper">
-      <h1>GO PROJECT3</h1>
+      <h1></h1>
           </div>
 
       <div className="anim-panel">
@@ -49,7 +40,7 @@ export const Home = props => <Transition
   <section className="siderbar">
       <div className="inner">
           <div className="clipper">
-              <h2>Featured</h2>
+              <h2>PATCH NOTES</h2>
           </div>
           <div className="anim-panel">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit neque quas! Consequuntur exercitationem, aperiam dicta perspiciatis maiores natus dolores fugit distinctio est at sed, officiis libero temporibus odit sequi.</p>

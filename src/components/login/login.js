@@ -23,15 +23,5 @@ export const Login = props => <Transition
 	
 >	
 <div>
-    <header>
-      <a href="/" className="Logo">Log-in page</a>
-      <nav>
-          <ul>
-              <li><Link className="btn gsap-btn" to="/home">Home</Link></li>
-              <li><Link className="btn gsap-btn" to="/game">Game</Link></li>
-              <li><Link className="btn gsap-btn" to="/scores">High Scores</Link></li>
-          </ul>
-      </nav>
-  </header>
 	</div>
 </Transition>;
