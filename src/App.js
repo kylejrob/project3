@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route} from "react-router-dom";
 // components
-import { Home } from "./components/Pages/home/home";
-import { Game } from "./components/Pages/game/game";
-import { Scores } from "./components/Pages/scores/scores";
-import { Patch } from "./components/Pages/patch/patch";
+import { Home } from "./components/Pages/home/Home";
+import { Game } from "./components/Pages/game/Game";
+import { Scores } from "./components/Pages/scores/Scores";
+import { Patch } from "./components/Pages/patch/Patch";
 import Navbar from "./components/Navbar";
 import './style.css'
 
