@@ -8,6 +8,7 @@ import { homedir } from "os";
 
 
 const startState = { autoAlpha: 0, y: -50 };
+
 export class Home extends Component {
 	constructor(props) {
 		super(props)
@@ -29,7 +30,7 @@ export class Home extends Component {
    render(){
  return(  
 
-<Transition
+    <Transition
     unmountOnExit
     in={this.state.show}
     timeout={1000}
@@ -43,17 +44,21 @@ export class Home extends Component {
     }}
 >
     <div>
-        
+    
 
         {/* THIS IS THE CODE IN THE MAIN PANEL */}
 
         <div className="wrapper">
             <section className="hero">
                 <div className="inner">
-                    {this.state.modalDisplay ? 
-                    <SignUp /> :
-                    <Login openSignup={this.openSignup} />}
+                    <div className="loginUser">
+                    <Login />
+                    </div>
                 </div>
+                <div className="playGameLink">
+                    <a href="/game" className="playGameLink"><h2>Play Now</h2></a>
+                    
+                    </div>
             </section>
 
             {/* THIS IS ALL THE CODE IN THE ASIDE */}
@@ -61,28 +66,32 @@ export class Home extends Component {
             <section className="siderbar">
                 <div className="inner">
                     <div className="clipper">
-                        <h2>Featured</h2>
+                        <h2>PATCH NOTES</h2>
                     </div>
                     <div className="anim-panel">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reprehenderit neque quas! Consequuntur exercitationem, aperiam dicta perspiciatis maiores natus dolores fugit distinctio est at sed, officiis libero temporibus odit sequi.</p>
-                        <a href="#" className="read-btn">Read more</a>
+                        <ul>
+                            <li>Ability to change ship size</li>
+                            <li>Ability to change bullet size</li>
+                            <li>Added shop to purchase different ships</li>
+                        </ul>
+                        <a href="/patch" className="read-btn">CLICK FOR PATCH NOTES</a>
                     </div>
                 </div>
             </section>
             <section className="subscribe">
                 <div className="inner">
                     <div className="clipper">
-                        <h2>Subscribe</h2>
+                        <h2>high scores</h2>
                     </div>
 
                     <div className="anim-panel">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis ad enim aliquid molestias quia possimus deleniti veniam a fugiat incidunt. Tempore tenetur dignissimos doloremque. Et praesentium accusamus ducimus totam aliquid!</p>
-                        <input type="text" name="email" placeholder="Email Address" />
-                        <button className="cta">Subscribe Now</button>
+                        <div>
+                            <p>high scores</p>
+                        </div>
+                        <button><a href="/scores" className="cta">CLICK FOR HIGH SCORES</a></button>
                     </div>
                 </div>
             </section>
         </div>
     </div>
 </Transition>)}}
-
