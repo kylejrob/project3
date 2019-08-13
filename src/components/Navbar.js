@@ -5,6 +5,8 @@ import logo from '../logo.svg';
 import '../App.css';
 import axios from 'axios'
 
+
+
 class Navbar extends Component {
     constructor() {
         super()
@@ -31,40 +33,30 @@ class Navbar extends Component {
         const loggedIn = this.props.loggedIn;
         console.log('navbar render, props: ')
         console.log(this.props);
-
+        
+        
+        
         return (
             <div>
+                <div>
 
-                <header className="navbar App-header" id="nav-container">
-                    <div className="col-4" >
-                        {loggedIn ? (
-                            <section className="navbar-section">
-                                <Link to="#" className="btn btn-outline-primary" onClick={this.logout}>
-                                    <span className="text-secondary">logout</span></Link>
-
-                            </section>
-                        ) : (
-                                <section className="navbar-section">
-                                    <Link to="/" className="btn btn-outline-primary">
-                                        <span className="text-secondary">home</span>
-                                    </Link>
-                                    <Link to="/signup" className="btn btn-link">
-                                        <span className="text-secondary">sign up</span>
-                                    </Link>
-                                </section>
-                            )}
-                    </div>
-                    <div className="col-4 col-mr-auto">
-                        <div id="top-filler"></div>
-                        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-                        <h1 className="App-title">Asteroids Game</h1>
-                    </div>
-                </header>
+<header>
+      <a href="/" className="Logo">PROJECT ASTEROIDS</a>
+      <nav>
+          <ul>
+              <li><a className="btn gsap-btn" href="/">Home</a></li>
+              <li><a className="btn gsap-btn" href="/game">Game</a></li>
+              <li><a className="btn gsap-btn" href="/scores">High Scores</a></li>
+          </ul>
+      </nav>
+  </header>
+            </div>
             </div>
 
         );
 
     }
 }
+
 
 export default Navbar
