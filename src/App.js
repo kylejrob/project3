@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route} from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 // components
 import { Home } from "./components/Pages/home/home";
 import { Game } from "./components/Pages/game/game";
@@ -13,44 +13,45 @@ import './style.css'
 
 class App extends Component {
 
-  render() {
-    return (
-		<div>
-			
-      <div className='container'>
-			<BrowserRouter>
-				<div className="row">
+	render() {
+		return (
+			<div>
 
-		<Navbar 
+				<div className='container'>
+					<BrowserRouter>
+						<div className="row">
 
-		/>
-					{/* MENU */}
-					
-				
+							<Navbar
 
-					{/* CONTENT */}
-					<div className="col-12">
+							/>
+							{/* MENU */}
 
-						<Route exact path="/" >
-							{ ({ match }) => <Home show={match !== null} /> }
-						</Route>
-						
-						<Route path="/game">
-							{ ({ match }) => <Game show={match !== null} /> }
-						</Route>
-						<Route path="/scores">
-							{ ({ match }) => <Scores show={match !== null} /> }
-						</Route> 
-						<Route path="/patch">
-							{ ({ match }) => <Patch show={match !== null} /> }
-						</Route> 
-					</div>
 
+
+							{/* CONTENT */}
+							<div className="col-12">
+
+								<Route exact path="/" >
+									{({ match }) => <Home show={match !== null} />}
+								</Route>
+
+								<Route path="/game">
+									{({ match }) => <Game show={match !== null} />}
+								</Route>
+								<Route path="/scores">
+									{({ match }) => <Scores show={match !== null} />}
+								</Route>
+								<Route path="/patch">
+									{({ match }) => <Patch show={match !== null} />}
+								</Route>
+							</div>
+
+						</div>
+					</BrowserRouter>
 				</div>
-			</BrowserRouter>      </div>
-		</div>
-    );
-  }
+			</div>
+		);
+	}
 }
 
 export default App;

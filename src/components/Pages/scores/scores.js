@@ -3,6 +3,10 @@ import { Transition } from "react-transition-group";
 import { TweenMax } from "gsap/all";
 import { TweenLite } from "gsap/all";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import ScoreTable from "./highScoreTable";
+import scores from "./scoredata.json";
+
+
 
 const startState = { autoAlpha: 0, y: -50 };
 
@@ -11,8 +15,8 @@ export const Scores = props => <Transition
 	unmountOnExit
 	in={props.show}
 	timeout={1000}
-	onEnter={ node => TweenLite.set(node, startState) }
-	addEndListener={ (node, done) => {
+	onEnter={node => TweenLite.set(node, startState)}
+	addEndListener={(node, done) => {
 		TweenLite.to(node, 0.5, {
 			autoAlpha: props.show ? 1 : 0,
 			y: props.show ? 0 : 50,
@@ -24,5 +28,8 @@ export const Scores = props => <Transition
 >	
 <div>
 
+<ScoreTable
+				data={scores}	
+			/>
 	</div>
 </Transition>;

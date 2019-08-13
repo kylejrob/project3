@@ -209,6 +209,13 @@ header nav ul li a {
   border: none;
   font-family: 'Montserrat';
 }
+#scoretable{
+  color:blue;
+  border-style: solid;
+  border-color: black;
+  padding-top: 200px;
+  margin-left:100px;
+}
 
 @media only screen and (max-width: 840px) {
   .playGameLink {
