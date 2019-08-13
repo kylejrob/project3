@@ -4,10 +4,12 @@ import { TweenMax } from "gsap/all";
 import { TweenLite } from "gsap/all";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
+
+
 const startState = { autoAlpha: 0, y: -50 };
 
 
-export const Scores = props => <Transition
+export const Patch = props => <Transition
 	unmountOnExit
 	in={props.show}
 	timeout={1000}
@@ -23,6 +25,14 @@ export const Scores = props => <Transition
 	
 >	
 <div>
+        <div className="patch">
+                        <ul>
+                            <li>Ability to change ship size</li>
+                            <li>Ability to change bullet size</li>
+                            <li>Added shop to purchase different ships</li>
+                        </ul>
+                        </div>
+
 
 	</div>
 </Transition>;

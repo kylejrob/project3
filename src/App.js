@@ -3,7 +3,8 @@ import { BrowserRouter, Route} from "react-router-dom";
 // components
 import { Home } from "./components/Pages/home/home";
 import { Game } from "./components/Pages/game/game";
-import { Scores } from "./components/Pages/scores/scores.js";
+import { Scores } from "./components/Pages/scores/scores";
+import { Patch } from "./components/Pages/patch/patch";
 import Navbar from "./components/Navbar";
 import './style.css'
 
@@ -39,6 +40,9 @@ class App extends Component {
 						</Route>
 						<Route path="/scores">
 							{ ({ match }) => <Scores show={match !== null} /> }
+						</Route> 
+						<Route path="/patch">
+							{ ({ match }) => <Patch show={match !== null} /> }
 						</Route> 
 					</div>
 
