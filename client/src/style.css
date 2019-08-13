@@ -7,6 +7,71 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.cta {
+  text-decoration: none;
+}
+
+.patch {
+  position: absolute;
+  bottom: 400px;
+  left: 80px;
+}
+
+.loginUser {
+  margin-bottom: -160px;
+}
+
+.playGameLink {
+  max-width: 200px;
+  text-decoration: none;
+  background-color: #004A7F;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 10px;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+  }
+  50% {
+    background-color: #FF0000;
+    -webkit-box-shadow: 0 0 40px #FF0000;
+  }
+  100% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+            box-shadow: 0 0 3px #B20000;
+  }
+  50% {
+    background-color: #FF0000;
+    -webkit-box-shadow: 0 0 40px #FF0000;
+            box-shadow: 0 0 40px #FF0000;
+  }
+  100% {
+    background-color: #B20000;
+    -webkit-box-shadow: 0 0 3px #B20000;
+            box-shadow: 0 0 3px #B20000;
+  }
+}
+
 header {
   position: absolute;
   padding: 1em;
@@ -125,6 +190,10 @@ header nav ul li a {
   background-color: #da7f18;
 }
 
+.wrapper section.subscribe a {
+  color: white;
+}
+
 .wrapper section.subscribe input {
   width: calc(100% - 2em);
   padding: 1em;
@@ -139,6 +208,27 @@ header nav ul li a {
   padding: 1em;
   border: none;
   font-family: 'Montserrat';
+}
+#scoretable{
+  color:blue;
+  border-style: solid;
+  border-color: black;
+  padding-top: 200px;
+  margin-left:100px;
+}
+
+@media only screen and (max-width: 840px) {
+  .playGameLink {
+    position: absolute;
+    bottom: 10px;
+    right: 60px;
+  }
+  .loginUser {
+    position: absolute;
+    bottom: 160px;
+    -ms-flex-line-pack: auto;
+        align-content: auto;
+  }
 }
 
 @media only screen and (min-width: 640px) {
