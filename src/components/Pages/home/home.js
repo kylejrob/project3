@@ -9,6 +9,7 @@ import { homedir } from "os";
 
 
 const startState = { autoAlpha: 0, y: -50 };
+
 export class Home extends Component {
 	constructor(props) {
 		super(props)
@@ -30,7 +31,7 @@ export class Home extends Component {
    render(){
  return(  
 
-<Transition
+    <Transition
     unmountOnExit
     in={this.state.show}
     timeout={1000}
@@ -51,8 +52,14 @@ export class Home extends Component {
         <div className="wrapper">
             <section className="hero">
                 <div className="inner">
+                    <div className="loginUser">
                     <Login />
+                    </div>
                 </div>
+                <div className="playGameLink">
+                    <a href="/game" className="playGameLink"><h2>Play Now</h2></a>
+                    
+                    </div>
             </section>
 
             {/* THIS IS ALL THE CODE IN THE ASIDE */}
@@ -89,4 +96,3 @@ export class Home extends Component {
         </div>
     </div>
 </Transition>)}}
-
