@@ -5,7 +5,7 @@ class ScoreTable extends React.Component{
     constructor(props){
 super(props)
 this.state ={
-    scores: scores
+    allscores: scores
 }
     }; 
      
@@ -21,7 +21,7 @@ render(){
             </thead>
             <tbody>
                 {
-                    this.state.scores.sort((a,b) =>b.score-a.score)
+                    this.state.allscores.sort((compare,next) =>next.singlescore-compare.singlescore)
                     .map(props =>(
                         <tr key={props.id}>
                           <td>{props.id}</td> 
