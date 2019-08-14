@@ -4,7 +4,6 @@ import axios from 'axios'
 import Input from '../../../Form/Input';
 import SubmitButton from "../../../Form/Button"
 import MyModal from '../../../Form/MyModal'
-import { STATES } from 'mongoose';
 
 class Signup extends Component {
 	constructor() {
@@ -132,7 +131,7 @@ render() {
 					<h7>Re-Enter Password:</h7>
 					<Input
 					type="password"
-					id="password"
+					id="password2"
 					placeholder="Password"
 					name="password2"
 					value={this.state.password2}
@@ -143,6 +142,12 @@ render() {
 					onClick={this.handleSubmit}
 					type="submit"
 					text="Sign Up"
+					/>
+					<SubmitButton 
+					className="btn btn-primary col-1 col-mr-auto"
+					onClick={this.props.closeSignup}
+					type=""
+					text="Return to Login"
 					/>
 				</form>
 			</div>

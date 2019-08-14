@@ -1,7 +1,4 @@
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
-import { Route, Link } from 'react-router-dom'
-import logo from '../logo.svg';
+import React, { Component } from 'react';
 import '../App.css';
 import axios from 'axios'
 
@@ -25,32 +22,27 @@ class Navbar extends Component {
                 })
             }
         }).catch(error => {
-            console.log('Logout error')
+            console.log(error)
         })
     }
 
     render() {
-        const loggedIn = this.props.loggedIn;
-        console.log('navbar render, props: ')
-        console.log(this.props);
-        
-        
-        
         return (
             <div>
                 <div>
 
-<header>
-      <a href="/" className="Logo">PROJECT ASTEROIDS</a>
-      <nav>
-          <ul>
-              <li><a className="btn gsap-btn" href="/">Home</a></li>
-              <li><a className="btn gsap-btn" href="/game">Game</a></li>
-              <li><a className="btn gsap-btn" href="/scores">High Scores</a></li>
-          </ul>
-      </nav>
-  </header>
-            </div>
+                    <header>
+                        <a href="/" className="Logo">PROJECT ASTEROIDS</a>
+                        <nav>
+                            <ul>
+                                <li><a className="btn gsap-btn" href="/">Home</a></li>
+                                <li><a className="btn gsap-btn" href="/game">Game</a></li>
+                                <li><a className="btn gsap-btn" href="/scores">High Scores</a></li>
+                                <li><a className="btn gsap-btn" href="/home" onClick={this.logout}>Log Out</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
             </div>
 
         );

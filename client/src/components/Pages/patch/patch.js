@@ -1,8 +1,6 @@
 import React from "react";
 import { Transition } from "react-transition-group";
-import { TweenMax } from "gsap/all";
 import { TweenLite } from "gsap/all";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 
 
 
