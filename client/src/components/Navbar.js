@@ -38,7 +38,7 @@ class Navbar extends Component {
                                 <li><a className="btn gsap-btn" href="/">Home</a></li>
                                 <li><a className="btn gsap-btn" href="/game">Game</a></li>
                                 <li><a className="btn gsap-btn" href="/scores">High Scores</a></li>
-                                <li><a className="btn gsap-btn" href="/home" onclick={this.logout}>Log Out</a></li>
+                                <li><a className="btn gsap-btn" href="/home" onClick={this.logout}>Log Out</a></li>
                             </ul>
                         </nav>
                     </header>

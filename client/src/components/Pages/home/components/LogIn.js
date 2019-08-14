@@ -93,7 +93,8 @@ class LoginForm extends Component {
                                 className="btn btn-primary col-1 col-mr-auto"
                                 onClick={this.handleSubmit}
                                 type="submit">Login</button>
-                                    <Button color="primary" size="lg" onClick={this.props.openSignup}>Create Account</Button>{' '}
+                                    <Button color="primary" size="lg" onClick={this.props.openSignup}>Create Account</Button>
+                                    
                         </div>
                     </form>
                 </div>
