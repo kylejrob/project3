@@ -4,7 +4,6 @@ import axios from 'axios'
 import Input from '../../../Form/Input';
 import SubmitButton from "../../../Form/Button"
 import MyModal from '../../../Form/MyModal'
-import { STATES } from 'mongoose';
 
 class Signup extends Component {
 	constructor() {
