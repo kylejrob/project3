@@ -3,11 +3,13 @@ import { Transition } from "react-transition-group";
 import { TweenMax } from "gsap/all";
 import Login from "../home/components/LogIn";
 import SignUp from "../home/components/SignUp";
+import { Modal, Button } from 'react-materialize';
 
 
 const startState = { autoAlpha: 0, y: -50 };
 
 export class Home extends Component {
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -16,8 +18,10 @@ export class Home extends Component {
 
 
         }
+        
 
     }
+    
 
     openSignup = event => {
         event.preventDefault()

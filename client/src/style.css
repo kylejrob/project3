@@ -72,6 +72,17 @@ body {
   }
 }
 
+.tableHighScores {
+  padding: 10px;
+  margin: 5px;
+  width: 50%;
+  border-style: groove;
+}
+
+.videoHolder {
+  border-style: solid;
+}
+
 .navbackground {
   background-color: #716e6e;
 }
