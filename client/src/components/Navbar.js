@@ -29,7 +29,7 @@ class Navbar extends Component {
     render() {
         return (
             <div>
-                <div>
+                <div className="navbackground">
 
                     <header>
                         <a href="/" className="Logo">PROJECT ASTEROIDS</a>

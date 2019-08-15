@@ -72,8 +72,11 @@ body {
   }
 }
 
+.navbackground {
+  background-color: #716e6e;
+}
+
 header {
-  position: absolute;
   padding: 1em;
   z-index: 20;
   display: -webkit-box;
@@ -88,7 +91,7 @@ header {
 
 header a {
   text-decoration: none;
-  color: black;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 header a.logo {
@@ -208,13 +211,6 @@ header nav ul li a {
   padding: 1em;
   border: none;
   font-family: 'Montserrat';
-}
-#scoretable{
-  color:blue;
-  border-style: solid;
-  border-color: black;
-  padding-top: 200px;
-  margin-left:100px;
 }
 
 @media only screen and (max-width: 840px) {

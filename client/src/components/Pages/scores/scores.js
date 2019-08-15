@@ -22,12 +22,12 @@ export const Scores = props => <Transition
 		});
 	}}
 
-	
->	
-<div>
 
-<ScoreTable
-				data={scores}	
-			/>
+>
+	<div>
+
+		<ScoreTable
+			data={scores}
+		/>
 	</div>
 </Transition>;
