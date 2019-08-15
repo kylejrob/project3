@@ -1,7 +1,25 @@
 import React from "react"
 import scores from "./scoredata.json";
-import {Table} from "reactstrap";
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
+
+
+const StyledTableCell = withStyles(theme => ({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+    },
+  }))(TableCell);
+  
 
 export default class ScoreTable extends React.Component {
     constructor(props) {
@@ -13,29 +31,35 @@ export default class ScoreTable extends React.Component {
 
     render() {
         return (
+            <div>
+            <div className="tableHighScores">
             
-            <Table dark hover >
-                <thead>
-                    <tr>
-                        <th>ID#&nbsp;</th>
-                        <th> username&nbsp;</th>
-                        <th>score</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <Table>
+                <TableHead>
+                    <TableRow>
+                        <StyledTableCell>ID#&nbsp;</StyledTableCell>
+                        <StyledTableCell> username&nbsp;</StyledTableCell>
+                        <StyledTableCell>score</StyledTableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
                     {
                         this.state.allscores.sort((a, b) => b.score - a.score)
                             .map(props => (
-                                <tr key={props.id}>
-                                    <td>{props.id}</td>
-                                    <td>{props.username}</td>
-                                    <td>{props.score}</td>
-                                </tr>
+                                <TableRow key={props.id}>
+                                    <TableCell>{props.id}</TableCell>
+                                    <TableCell>{props.username}</TableCell>
+                                    <TableCell>{props.score}</TableCell>
+                                </TableRow>
                             ))
                     }
-                </tbody>
+                </TableBody>
             </Table>
-            
+            </div> 
+            <div className="videoHolder">
+                <p>lorem ipsum</p>
+            </div>
+            </div>
         )
     }
 };
