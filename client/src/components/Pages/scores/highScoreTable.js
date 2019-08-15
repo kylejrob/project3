@@ -1,7 +1,9 @@
 import React from "react"
 import scores from "./scoredata.json";
+import {Table} from "reactstrap";
+//import 'bootstrap/dist/css/bootstrap.min.css';
 
-class ScoreTable extends React.Component {
+export default class ScoreTable extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -11,7 +13,8 @@ class ScoreTable extends React.Component {
 
     render() {
         return (
-            <table id="scoretable">
+            
+            <Table dark hover >
                 <thead>
                     <tr>
                         <th>ID#&nbsp;</th>
@@ -21,7 +24,7 @@ class ScoreTable extends React.Component {
                 </thead>
                 <tbody>
                     {
-                        this.state.allscores.sort((compare, next) => next.singlescore - compare.singlescore)
+                        this.state.allscores.sort((a, b) => b.score - a.score)
                             .map(props => (
                                 <tr key={props.id}>
                                     <td>{props.id}</td>
@@ -31,8 +34,8 @@ class ScoreTable extends React.Component {
                             ))
                     }
                 </tbody>
-            </table>
+            </Table>
+            
         )
     }
 };
-export default ScoreTable;
