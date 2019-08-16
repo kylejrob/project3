@@ -5,6 +5,7 @@ import { Home } from "./components/Pages/home/home";
 import { Scores } from "./components/Pages/scores/scores";
 import { Patch } from "./components/Pages/patch/patch";
 import Navbar from "./components/Navbar";
+import Reacteroids from './components/Pages/game/src/Reacteroids'
 import axios from 'axios';
 import './style.css';
 
@@ -78,7 +79,7 @@ class App extends Component {
 								</Route>
 
 								<Route path="/game">
-									{({ match }) => <Home show={match !== null} />}
+									{({ match }) => <Reacteroids show={match !== null} />}
 								</Route>
 								<Route path="/scores">
 									{({ match }) => <Scores show={match !== null} />}
