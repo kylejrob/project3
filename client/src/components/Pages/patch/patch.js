@@ -41,12 +41,11 @@ export const Patch = props => <Transition
                         </ul>
         </Grid>
 		<Grid item xs={6}>
-			<h2>Mike</h2>
 			<Card>
 				<CardContent>
-					<Typography color="textSecondary">Program Developer</Typography>
-					<Typography variant="h5" component="h2">
-						React
+					<Typography variant="h5" component="h2">Mike Santarelli</Typography>
+					<Typography color="textSecondary">
+						React Developer
 					</Typography>
 					<CardActions>
 						<Button size="small" href="https://cleve716.github.io/detailed-portfolio/">Portfolio</Button>
@@ -56,12 +55,11 @@ export const Patch = props => <Transition
 		</Grid>
 
 		<Grid item xs={6}>
-			<h2>Stet</h2>
 			<Card>
 				<CardContent>
-					<Typography color="textSecondary">Program Developer</Typography>
-					<Typography variant="h5" component="h2">
-						React
+				<Typography variant="h5" component="h2">Stet Olaye</Typography>
+					<Typography color="textSecondary">
+						React Developer
 					</Typography>
 					<CardActions>
 						<Button size="small" href="https://solaye.github.io/Updated-Portfolio/">Portfolio</Button>
@@ -71,12 +69,11 @@ export const Patch = props => <Transition
 		</Grid>
 
 		<Grid item xs={6}>
-			<h2>Kyle</h2>
 			<Card>
 				<CardContent>
-					<Typography color="textSecondary">Program Developer</Typography>
-					<Typography variant="h5" component="h2">
-						React
+					<Typography variant="h5" component="h2">Kyle Robinson</Typography>
+					<Typography color="textSecondary">
+						React Developer
 					</Typography>
 					<CardActions>
 						<Button size="small" href="https://kylejrob.github.io/designPortfolio/">Portfolio</Button>
@@ -86,12 +83,11 @@ export const Patch = props => <Transition
 		</Grid>
 
 		<Grid item xs={6}>
-			<h2>Jeff</h2>
 			<Card>
 				<CardContent>
-					<Typography color="textSecondary">Program Developer</Typography>
-					<Typography variant="h5" component="h2">
-						React
+					<Typography variant="h5" component="h2">Jeff Fleer</Typography>
+					<Typography color="textSecondary">
+						React Developer
 					</Typography>
 					<CardActions>
 						<Button size="small" href="https://fleerless.github.io/Responsive-Portfolio/">Portfolio</Button>
