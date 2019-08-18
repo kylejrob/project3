@@ -1,4 +1,5 @@
 import React from "react"
+import Grid from '@material-ui/core/Grid';
 
 
 export default class VideoGrid extends React.Component {
@@ -6,11 +7,22 @@ export default class VideoGrid extends React.Component {
     render() {
         return (
             <>
-                <h1>VIDEOS</h1>
-
-                <p>This is where the video grid comes from... pushing into highScoresTable from video.js
-                    ---------- blah...blah... blah...blah...blah...blah... blah...blah...blah...blah... blah...blah...
-                </p>
+                <div className = "videoBody"><h1>VIDEOS</h1></div>
+                <Grid container spacing={4}>
+                    <Grid item xs={12}>
+                        video1
+                    </Grid>
+                    <Grid item xs={12}>
+                        video2
+                    </Grid>
+                    <Grid item xs={12}>
+                        video3
+                    </Grid>
+                    <Grid item xs={12}>
+                        video4
+                    </Grid>
+                  
+                </Grid>
             </>
         )
     }
