@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 // components
 import { Home } from "./components/Pages/home/home";
 import { Scores } from "./components/Pages/scores/scores";
 import { Patch } from "./components/Pages/patch/patch";
 import Navbar from "./components/Navbar";
+import Reacteroids from './components/Pages/game/Reacteroids'
 import axios from 'axios';
 import './style.css';
 
@@ -57,41 +58,38 @@ class App extends Component {
 
 	render() {
 		return (
-			<div>
 
 				<div className='container'>
 					<BrowserRouter>
 						<div className="row">
 
-							<Navbar
-
-							/>
+							<Navbar />
 							{/* MENU */}
 
 
 
 							{/* CONTENT */}
 							<div className="col-12">
-
+							<Switch>
 								<Route exact path="/" >
 									{({ match }) => <Home show={match !== null} />}
 								</Route>
 
-								<Route path="/game">
-									{({ match }) => <Home show={match !== null} />}
+								<Route  exact path="/game">
+									{({ match }) => <Reacteroids show={match !== null} />}
 								</Route>
-								<Route path="/scores">
+								<Route exact path="/scores">
 									{({ match }) => <Scores show={match !== null} />}
 								</Route>
-								<Route path="/patch">
+								<Route exact path="/patch">
 									{({ match }) => <Patch show={match !== null} />}
 								</Route>
+							</Switch>
 							</div>
 
 						</div>
 					</BrowserRouter>
 				</div>
-			</div>
 		);
 	}
 }
