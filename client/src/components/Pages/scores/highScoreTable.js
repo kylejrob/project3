@@ -7,19 +7,21 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
+import VideoGrid from "../home/components/video/video"
+import Grid from '@material-ui/core/Grid';
 
 
 
 const StyledTableCell = withStyles(theme => ({
     head: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
+        backgroundColor: theme.palette.common.black,
+        color: theme.palette.common.white,
     },
     body: {
-      fontSize: 14,
+        fontSize: 14,
     },
-  }))(TableCell);
-  
+}))(TableCell);
+
 
 export default class ScoreTable extends React.Component {
     constructor(props) {
@@ -31,35 +33,45 @@ export default class ScoreTable extends React.Component {
 
     render() {
         return (
-            <div>
-            <div className="tableHighScores">
-            
-            <Table>
-                <TableHead>
-                    <TableRow>
-                        <StyledTableCell>ID#&nbsp;</StyledTableCell>
-                        <StyledTableCell> username&nbsp;</StyledTableCell>
-                        <StyledTableCell>score</StyledTableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {
-                        this.state.allscores.sort((a, b) => b.score - a.score)
-                            .map(props => (
-                                <TableRow key={props.id}>
-                                    <TableCell>{props.id}</TableCell>
-                                    <TableCell>{props.username}</TableCell>
-                                    <TableCell>{props.score}</TableCell>
-                                </TableRow>
-                            ))
-                    }
-                </TableBody>
-            </Table>
-            </div> 
-            <div className="videoHolder">
-                <p>lorem ipsum</p>
-            </div>
-            </div>
+            <body>
+                <Grid container spacing={1}>
+                    <Grid item xs={6}>
+
+                        <div className="tableHighScores">
+
+                            <Table>
+                                <TableHead>
+                                    <TableRow>
+                                        <StyledTableCell>ID#&nbsp;</StyledTableCell>
+                                        <StyledTableCell> username&nbsp;</StyledTableCell>
+                                        <StyledTableCell>score</StyledTableCell>
+                                    </TableRow>
+                                </TableHead>
+                                <TableBody>
+                                    {
+                                        this.state.allscores.sort((a, b) => b.score - a.score)
+                                            .map(props => (
+                                                <TableRow key={props.id}>
+                                                    <TableCell>{props.id}</TableCell>
+                                                    <TableCell>{props.username}</TableCell>
+                                                    <TableCell>{props.score}</TableCell>
+                                                </TableRow>
+                                            ))
+                                    }
+                                </TableBody>
+                            </Table>
+
+
+
+                        </div>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <div className="videoHolder">
+                            <VideoGrid />
+                        </div>
+                    </Grid>
+                </Grid>
+            </body>
         )
     }
 };
