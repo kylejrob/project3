@@ -63,7 +63,7 @@ export class Home extends Component {
                                 <div className="loginUser">
                                     {this.state.isShowSignup ?
                                         <SignUp closeSignup={this.closeSignup} /> :
-                                        <Login openSignup={this.openSignup} />
+                                        <Login openSignup={this.openSignup} updateUser={this.props.updateUser} />
                                     }
                                 </div>
                             </div>

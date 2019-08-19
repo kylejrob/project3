@@ -7,7 +7,14 @@ mongoose.promise = Promise
 const userSchema = new Schema({
 
 	username: { type: String, unique: false, required: false },
-	password: { type: String, unique: false, required: false }
+	password: { type: String, unique: false, required: false },
+	highScore: {type: Number,default: 0, unique: false, required: false},
+	credits: {type: Number, default: 0, unique: false, required: false},
+	shipColor: {type: String, default: "#000000", unique: false, required: false},
+	shipCount: {type: Number, default: 0, unique: false, required: false},
+	shipOutline: {type: String, default: "#ffffff", unique: false, required: false},
+	bulletSize: {type: Number, default: 2, unique: false, required: false},
+	bulletCount: {type: Number, default: 0, unique: false, required: false}
 
 })
 
