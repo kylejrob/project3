@@ -137,7 +137,10 @@ class Reacteroids extends Component {
         y: this.state.screen.height/2
       },
       create: this.createObject.bind(this),
-      onDie: this.gameOver.bind(this)
+      onDie: this.gameOver.bind(this),
+      shipColor: this.props.shipColor,
+      shipOutline: this.props.shipOutline,
+      bulletSize: this.props.bulletSize
     });
     this.createObject(ship, 'ship');
 

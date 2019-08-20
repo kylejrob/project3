@@ -34,10 +34,19 @@ class LoginForm extends Component {
                 console.log('login response: ')
                 console.log(response)
                 if (response.status === 200) {
+                    console.log('testy')
                     // update App.js state
                     this.props.updateUser({
                         loggedIn: true,
-                        username: response.data.username
+                        username: response.data.username,
+                        highScore: response.data.highScore,
+                        credits: response.data.credits,
+					    shipColor: response.data.shipColor,
+					    shipCount: response.data.shipCount,
+				    	shipOutline: response.data.shipOutline,
+					    bulletSize: response.data.bulletSize,
+					    bulletCount: response.data.bulletCount
+					
                     })
                     // update the state to redirect to home
                     this.setState({

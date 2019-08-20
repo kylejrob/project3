@@ -3,6 +3,18 @@ const router = express.Router()
 const User = require('../database/models/user')
 const passport = require('../passport')
 
+
+router.get('/', (req, res, next) => {
+    console.log('===== user!!======')
+    console.log(req.user)
+    if (req.user) {
+       console.log('hi') 
+       res.json({ user: req.user })
+    } else {
+        res.json({ user: null })
+    }
+})
+
 router.post('/', (req, res) => {
     console.log('user signup');
 
@@ -38,23 +50,19 @@ router.post(
     },
     passport.authenticate('local'),
     (req, res) => {
-        console.log('logged in', req.user);
+        console.log('logged in now', req.user);
         var userInfo = {
-            username: req.user.username
+            username: req.user.username,
+            password: req.user.password,
+            shipColor: req.user.shipColor
         };
-        res.send(userInfo);
+        // res.json(userInfo);
+        console.log('we are hitting this poibt')
+        res.json(req.user)
     }
 )
 
-router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
-    console.log(req.user)
-    if (req.user) {
-        res.json({ user: req.user })
-    } else {
-        res.json({ user: null })
-    }
-})
+
 
 router.post('/logout', (req, res) => {
     if (req.user) {

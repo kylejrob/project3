@@ -89,7 +89,7 @@ export default class Ship extends Component {
       this.rotate('RIGHT');
     }
     if(state.keys.space && Date.now() - this.lastShot > 300){
-      const bullet = new Bullet({ship: this});
+      const bullet = new Bullet({ship: this, bulletSize: this.props.bulletSize });
       this.create(bullet, 'bullets');
       this.lastShot = Date.now();
     }
