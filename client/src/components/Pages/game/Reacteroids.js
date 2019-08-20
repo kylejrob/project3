@@ -245,7 +245,7 @@ class Reacteroids extends Component {
     }
 
     return (
-      <div>
+      <div className = "bodygame">
         { endgame }
         <span className="score current-score" >Score: {this.state.currentScore}</span>
         <span className="score top-score" >Top Score: {this.state.topScore}</span>
