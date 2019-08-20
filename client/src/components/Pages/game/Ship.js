@@ -25,7 +25,6 @@ export default class Ship extends Component {
 
 
   destroy(){
-    console.log("PROPS: ", this.props.shipColor)
     this.delete = true;
     this.onDie();
 
