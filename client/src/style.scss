@@ -189,12 +189,21 @@ body {
 .tableHighScores {
     padding: 10px;
     margin: 15px;
-    width: 70%;
+    width: 96%;
     border-style: groove;
 }
 
+.searchBarVideo {
+    height: 60px;
+    width: 908px;
+    margin-bottom: 4px;
+    font-size: 28px;
+}
+
 .videoHolder {
-    border-style: solid;
+    
+    padding: 15px;
+    margin-left: 12px;
     
 }
 
