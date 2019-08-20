@@ -7,6 +7,81 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.bodygame {
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Mono', serif;
+  color: #ffffff;
+}
+
+canvas {
+  display: block;
+  background-color: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.current-score {
+  left: 20px;
+}
+
+.top-score {
+  right: 20px;
+}
+
+.score {
+  display: block;
+  position: absolute;
+  top: 15px;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.controls {
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  z-index: 1;
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.endgame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 16px;
+  z-index: 1;
+  text-align: center;
+}
+
+button {
+  border: 4px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-family: 'PT Mono', serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 .portfolioButton {
   border-style: ridge;
 }
@@ -133,9 +208,7 @@ body {
 }
 
 .videoHolder {
-  border-style: groove;
-  margin: 15px;
-  padding: 50px;
+  border-style: solid;
 }
 
 .navbackground {
@@ -308,7 +381,7 @@ header nav ul li a {
         grid-template-columns: 70% auto;
     -ms-grid-rows: 60% auto;
         grid-template-rows: 60% auto;
-        grid-template-areas: "hero featured" "hero subscribe";
+        grid-template-areas: "hero featured" "hero subscribe";
     height: 100vh;
   }
   section.hero {
@@ -334,72 +407,3 @@ header nav ul li a {
   }
 }
 /*# sourceMappingURL=style.css.map */
-
-
-
-/* STYLE FROM REACTEROIDS */
-
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'PT Mono', serif;
-  color: #ffffff;
-}
-canvas {
-  display: block;
-  background-color: #000000;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-.current-score {
-  left: 20px;
-}
-.top-score {
-  right: 20px;
-}
-.score {
-  display: block;
-  position: absolute;
-  top: 15px;
-  z-index: 1;
-  font-size: 20px;
-}
-.controls {
-  display: block;
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  z-index: 1;
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.6;
-}
-.endgame{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 16px;
-  z-index: 1;
-  text-align: center;
-}
-button{
-  border: 4px solid #ffffff;
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px;
-  margin: 10px;
-  font-family: 'PT Mono', serif;
-  cursor: pointer;
-}
-button:hover{
-  background-color: #ffffff;
-  color: #000000;
-}
