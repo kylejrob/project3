@@ -203,12 +203,20 @@ button:hover {
 .tableHighScores {
   padding: 10px;
   margin: 15px;
-  width: 70%;
+  width: 96%;
   border-style: groove;
 }
 
+.searchBarVideo {
+  height: 60px;
+  width: 908px;
+  margin-bottom: 4px;
+  font-size: 28px;
+}
+
 .videoHolder {
-  border-style: solid;
+  padding: 15px;
+  margin-left: 12px;
 }
 
 .navbackground {
@@ -381,7 +389,7 @@ header nav ul li a {
         grid-template-columns: 70% auto;
     -ms-grid-rows: 60% auto;
         grid-template-rows: 60% auto;
-        grid-template-areas: "hero featured" "hero subscribe";
+        grid-template-areas: "hero featured" "hero subscribe";
     height: 100vh;
   }
   section.hero {

@@ -35,7 +35,7 @@ export default class ScoreTable extends React.Component {
         return (
             <body>
                 <Grid container spacing={1}>
-                    <Grid item xs={6}>
+                    <Grid item xs={4}>
 
                         <div className="tableHighScores">
 
@@ -65,7 +65,7 @@ export default class ScoreTable extends React.Component {
 
                         </div>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={8}>
                         <div className="videoHolder">
                             <VideoGrid />
                         </div>
