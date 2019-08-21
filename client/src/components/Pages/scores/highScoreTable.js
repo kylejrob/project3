@@ -7,7 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
-import VideoGrid from "../home/components/video/video"
+import VideoGrid from "./Video"
 import Grid from '@material-ui/core/Grid';
 
 
@@ -35,7 +35,7 @@ export default class ScoreTable extends React.Component {
         return (
             <body>
                 <Grid container spacing={1}>
-                    <Grid item xs={6}>
+                    <Grid item xs={4}>
 
                         <div className="tableHighScores">
 
@@ -65,7 +65,7 @@ export default class ScoreTable extends React.Component {
 
                         </div>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={8}>
                         <div className="videoHolder">
                             <VideoGrid />
                         </div>

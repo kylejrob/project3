@@ -118,8 +118,8 @@ export default class Ship extends Component {
     context.save();
     context.translate(this.position.x, this.position.y);
     context.rotate(this.rotation * Math.PI / 180);
-    context.strokeStyle = this.props.shipOutline;
-    context.fillStyle = this.props.shipColor;
+    context.strokeStyle = this.props.shipOutline || '#ffffff';
+    context.fillStyle = this.props.shipColor || '#000000';
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -15);

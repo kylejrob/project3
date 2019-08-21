@@ -6,6 +6,7 @@ import scores from "./scoredata.json";
 
 
 
+
 const startState = { autoAlpha: 0, y: -50 };
 
 

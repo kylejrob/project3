@@ -20,15 +20,9 @@ class MyModal extends React.Component {
         super();
 
         this.state = {
-            modalIsOpen: false
         };
 
-        this.openModal = this.openModal.bind(this);
         this.afterOpenModal = this.afterOpenModal.bind(this);
-    }
-
-    openModal() {
-        this.setState({ modalIsOpen: true });
     }
 
     afterOpenModal() {
@@ -45,7 +39,7 @@ class MyModal extends React.Component {
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
                     style={customStyles}
-                    contentLabel="Example Modal"
+                    contentLabel="Error Modal"
                 >
 
                     <h2 ref={subtitle => this.subtitle = subtitle}>{this.props.heading}</h2>
