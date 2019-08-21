@@ -36,31 +36,26 @@ class Signup extends Component {
 	
 	
 	handleSubmit(event) {
-		console.log('sign-up handleSubmit, username: ')
-		console.log(this.state.username)
 		event.preventDefault()
 
 		if(this.state.username.length === 0 || this.state.password.length === 0 || this.state.password2 === 0){
 			this.setState({
-				message: "fill out all fields",
+				message: "Please, fill out all fields",
 				heading: "FORM ERROR",
 				modalDisplay: true
 			})
-			// REMOVE ALERT AND CHANGE TO MODAL
 		} else if (this.state.password2 !== this.state.password){
 			this.setState({
-				message: "passwords don't match",
+				message: "Passwords don't match",
 				heading: 'PASSWORD ERROR',
 				modalDisplay: true
 			})
-			// REMOVE ALERT AND CHANGE TO MODAL
 		} else if (this.state.password.length < 6 || this.state.password2.length < 6){
 			this.setState({
-				message: "make password longer than 6 characters",
+				message: "Make password longer than 6 characters",
 				heading: 'PASSWORD ERROR',
 				modalDisplay: true
 			})
-			// REMOVE ALERT AND CHANGE TO MODAL
 		} else {
 			//request to server to add a new username/password
 			axios.post('/user/', {
@@ -74,13 +69,12 @@ class Signup extends Component {
 						this.setState({ //redirect to login page
 							redirectTo: '/'
 						})
+						this.props.closeSignup()
 					} else {
 						console.log('username already taken')
 					}
 				}).catch(error => {
-					console.log('signup error: ')
-					console.log(error)
-	
+					console.log('signup error: ', error)	
 				})
 
 		}

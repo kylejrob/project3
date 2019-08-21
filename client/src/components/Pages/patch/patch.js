@@ -36,9 +36,9 @@ export const Patch = props => <Transition
         <Grid item xs={12}>
 			<div className="patchNotes">
                         <ul>
-                            <li>Ability to change ship size</li>
-                            <li>Ability to change bullet size</li>
-                            <li>Added shop to purchase different ships</li>
+                            <li>Brand New Shop! This is our new feature that will allow registerd users to purchase in-game content.</li><br></br>
+                            <li>Ability to purchase new color ways for your ship! Three colors available from the store. First purchase is FREE!</li><br></br>
+                            <li>Ability to purchase bullet upgrades from the store! Each purchase will increase your bullet size by 2, there is no limit on how many you can buy, only how many you can afford. The first purchase is free, but beware each upgrade is more expensive than the last.</li><br></br>
                         </ul>
 						</div>
         </Grid>
