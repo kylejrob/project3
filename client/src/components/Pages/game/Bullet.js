@@ -2,6 +2,9 @@ import { rotatePoint } from './helpers';
 
 export default class Bullet {
   constructor(args) {
+    this.state = {
+      bulletSize: args.bulletSize || 2
+    }
     let posDelta = rotatePoint({x:0, y:-20}, {x:0,y:0}, args.ship.rotation * Math.PI / 180);
     this.position = {
       x: args.ship.position.x + posDelta.x,
@@ -12,11 +15,12 @@ export default class Bullet {
       x:posDelta.x / 2,
       y:posDelta.y / 2
     };
-    this.radius = 100;
+    this.radius = this.state.bulletSize;
   }
 
   destroy(){
     this.delete = true;
+    console.log("WORDS OF WORDS")
   }
 
   render(state){
@@ -40,7 +44,7 @@ export default class Bullet {
     context.fillStyle = '#FFF';
     // context.lineWidth = 0,5;
     context.beginPath();
-    context.arc(0, 0, 100, 0, 2 * Math.PI);
+    context.arc(0, 0, this.state.bulletSize, 0, 2 * Math.PI);
     context.closePath();
     context.fill();
     context.restore();

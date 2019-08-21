@@ -1,10 +1,13 @@
+import { Component } from 'react';
 import Bullet from './Bullet';
 import Particle from './Particle';
 import { rotatePoint, randomNumBetween } from './helpers';
+import { ColorPropsPlugin } from 'gsap/all';
 
-export default class Ship {
-  constructor(args) {
-    this.position = args.position
+export default class Ship extends Component {
+  constructor(props) {
+    super(props)
+    this.position = props.position
     this.velocity = {
       x: 0,
       y: 0
@@ -15,9 +18,11 @@ export default class Ship {
     this.inertia = 0.99;
     this.radius = 20;
     this.lastShot = 0;
-    this.create = args.create;
-    this.onDie = args.onDie;
+    this.create = props.create;
+    this.onDie = props.onDie;
   }
+
+
 
   destroy(){
     this.delete = true;
@@ -83,7 +88,7 @@ export default class Ship {
       this.rotate('RIGHT');
     }
     if(state.keys.space && Date.now() - this.lastShot > 300){
-      const bullet = new Bullet({ship: this});
+      const bullet = new Bullet({ship: this, bulletSize: this.props.bulletSize });
       this.create(bullet, 'bullets');
       this.lastShot = Date.now();
     }
@@ -113,8 +118,8 @@ export default class Ship {
     context.save();
     context.translate(this.position.x, this.position.y);
     context.rotate(this.rotation * Math.PI / 180);
-    context.strokeStyle = '#ffffff';
-    context.fillStyle = '#FF0000';
+    context.strokeStyle = this.props.shipOutline || '#ffffff';
+    context.fillStyle = this.props.shipColor || '#000000';
     context.lineWidth = 2;
     context.beginPath();
     context.moveTo(0, -15);
@@ -126,5 +131,6 @@ export default class Ship {
     context.fill();
     context.stroke();
     context.restore();
+    return 
   }
 }

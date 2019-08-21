@@ -17,7 +17,16 @@ class App extends Component {
 		super()
 		this.state = {
 			loggedIn: false,
-			username: null
+			username: null,
+			highScore: null,
+			credits: null,
+			shipColor: null,
+			shipCount: null,
+			shipOutline: null,
+			bulletSize: null,
+			bulletCount: null
+
+
 		}
 
 		this.getUser = this.getUser.bind(this)
@@ -41,13 +50,24 @@ class App extends Component {
 
 				this.setState({
 					loggedIn: true,
-					username: response.data.user.username
+					username: response.data.user.username,
+					highScore: response.data.user.highScore,
+					credits: response.data.user.credits,
+					shipColor: response.data.user.shipColor,
+					shipCount: response.data.user.shipCount,
+					shipOutline: response.data.user.shipOutline,
+					bulletSize: response.data.user.bulletSize,
+					bulletCount: response.data.user.bulletCount
+					
+					
+
 				})
 			} else {
 				console.log('Get user: no user');
 				this.setState({
 					loggedIn: false,
 					username: null
+
 				})
 			}
 		})
@@ -63,20 +83,20 @@ class App extends Component {
 					<BrowserRouter>
 						<div className="row">
 
-							<Navbar />
+						
 							{/* MENU */}
-
+							<Navbar/>
 
 
 							{/* CONTENT */}
 							<div className="col-12">
 							<Switch>
 								<Route exact path="/" >
-									{({ match }) => <Home show={match !== null} />}
+									{({ match }) =><Home show={match !== null} updateUser={this.updateUser} />}
 								</Route>
 
 								<Route  exact path="/game">
-									{({ match }) => <Reacteroids show={match !== null} />}
+									{({ match }) => <Reacteroids show={match !== null} shipColor={this.state.shipColor} shipOutline={this.state.shipOutline} bulletSize={this.state.bulletSize} />}
 								</Route>
 								<Route exact path="/scores">
 									{({ match }) => <Scores show={match !== null} />}
