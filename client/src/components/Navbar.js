@@ -10,7 +10,7 @@ class Navbar extends Component {
     constructor() {
         super()
         this.state = {
-             redirectTo: null   
+            redirectTo: null   
 
 
 
@@ -50,10 +50,11 @@ class Navbar extends Component {
                         <a href="/" className="Logo">PROJECT ASTEROIDS</a>
                         <nav>
                             <ul>
-                                <li><a className="btn gsap-btn" href="/">Home</a></li>
-                                <li><a className="btn gsap-btn" href="/game">Game</a></li>
-                                <li><a className="btn gsap-btn" href="/scores">High Scores</a></li>
-                                <li><a className="btn gsap-btn" href="/" onClick={this.logout}>Log Out</a></li>
+                                <li><a className="btn gsap-btn blacktext" href="/">Home</a></li>
+                                <li><a className="btn gsap-btn blacktext" href="/game">Game</a></li>
+                                <li><a className="btn gsap-btn blacktext" href="/store">Store</a></li>
+                                <li><a className="btn gsap-btn blacktext" href="/scores">High Scores</a></li>
+                                <li><a className="btn gsap-btn blacktext" href="/" onClick={this.logout}>Log Out</a></li>
                             </ul>
                         </nav>
                     </header>
