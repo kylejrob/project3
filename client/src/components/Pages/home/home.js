@@ -78,11 +78,11 @@ export class Home extends Component {
                         <section className="siderbar">
                             <div className="inner">
                                 <div className="clipper">
-                                    <h2>PATCH NOTES</h2>
+                                    <h2>PATCH NOTES:</h2>
                                 </div>
                                 <div className="anim-panel">
                                     <ul>
-                                        <li>Ability to change ship size</li>
+                                        <li>Ability to change ship color</li>
                                         <li>Ability to change bullet size</li>
                                         <li>Added shop to purchase different ships</li>
                                     </ul>
