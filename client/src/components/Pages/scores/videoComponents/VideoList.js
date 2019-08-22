@@ -1,16 +1,35 @@
 import React from "react";
+import styled from "styled-components"
 
-const VideoList = () => {
+const List = styled.ul` 
+list-style:none;
+padding:0;
+`
+const ListItem =styled.li`
+img{
+border:3px solid gray;
+border-radius:10px;
+cursor:pointer;
+:hover{
+    border-color:yellow;
+}
+
+}
+`
+
+const VideoList = ({children}) => {
     return (
-        <h2>List of videos goes here</h2>
+     <List>{children}</List>
     )
 }
 
 
 
-const VideoListItem = () => {
+const VideoListItem = ({video,selectedVideo}) => {
     return (
-        <h3>Video List Item</h3>
+        <ListItem active={video===selectedVideo}>
+          <  img src={video.snippet.thumbnails.medium.url}/>
+        </ListItem>
     )
 }
 export{VideoList, VideoListItem};

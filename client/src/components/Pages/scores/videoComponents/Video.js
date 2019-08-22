@@ -1,15 +1,32 @@
-import React from "react";
+import React, { Component } from "react";
 import Grid from '@material-ui/core/Grid';
 import { Typography } from "@material-ui/core";
+import API from "../utils/API"
 import SearchBar from "./SearchBar";
-import SingleVideo from "./SingleVideo";
-import {VideoList,VideoListItem} from "./VideoList"
+import VideoDetail from "./VideoDetail";
+import { VideoList, VideoListItem } from "./VideoList";
+
+
+
+
+class VideoGrid extends Component {
+
+    state = {
+        videos: [],
+        selectedVideo: null
+    }
+
+    componentDidMount() {
+        API.searchYouTube("asteroids video game")
+            .then(res => this.setState({ videos: res.data.items, selectedVideo: res.data.items[0] }))
+            .catch(err => console.log(err));
+
+    }
 
 
 
 
 
-export default class VideoGrid extends React.Component {
 
     render() {
         return (
@@ -17,39 +34,32 @@ export default class VideoGrid extends React.Component {
                 <Grid container spacing={12}>
                     <Grid>
                         <SearchBar />
-                        {/* <input className="searchBarVideo" type="text" placeholder="Search.."></input> */}
-
                     </Grid>
-              
 
-                <Grid container spacing={12}>
-                    <Grid item xs={6}>
-                    <Typography><SingleVideo /></Typography>
-                        {/* <Typography><iframe width="600" height="400" src="https://www.youtube.com/embed/bU1QPtOZQZU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></Typography> */}
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Grid>
-                        <Typography><VideoList /></Typography>
-                            {/* <iframe width="300" height="200" src="https://www.youtube.com/embed/Hs2LY5NYL0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+                    <Grid container spacing={12}>
+                        <Grid item xs={6}>
+                            <VideoDetail selectedVideo={this.state.selectedVideo} />
                         </Grid>
-                        {/* <Grid>
-                            <iframe width="300" height="200" src="https://www.youtube.com/embed/Hs2LY5NYL0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <Grid item xs={6}>
+                            <Grid>
+                                <VideoList>
+                                    {this.state.videos.map(video => (
+                                        <VideoListItem 
+                                        video={video} 
+                                        key={video.id.videoId}
+                                        selectedVideo={this.state.selectedVideo}
+                                         />
+                                    ))}
+                                </VideoList>
+                            </Grid>
                         </Grid>
-                        <Grid>
-                            <iframe width="300" height="200" src="https://www.youtube.com/embed/Hs2LY5NYL0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </Grid>
-                        <Grid>
-                            <iframe width="300" height="200" src="https://www.youtube.com/embed/Hs2LY5NYL0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </Grid>
-                        <Grid>
-                            <iframe width="300" height="200" src="https://www.youtube.com/embed/Hs2LY5NYL0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </Grid> */}
                     </Grid>
                 </Grid>
-                  </Grid>
 
 
             </>
         )
     }
 };
+export default VideoGrid;

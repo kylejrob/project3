@@ -121,6 +121,9 @@ body {
     line-height: 1.5;
 
 }
+.videolist{
+  list-style: none; 
+}
 
 .cardNames:hover {
     transform: scale(1.3);
@@ -162,6 +165,7 @@ body {
   -o-animation: glowing 1500ms infinite;
   animation: glowing 1500ms infinite;
 }
+
 @-webkit-keyframes glowing {
   0% { background-color: #B20000; -webkit-box-shadow: 0 0 3px #B20000; }
   50% { background-color: #FF0000; -webkit-box-shadow: 0 0 40px #FF0000; }
