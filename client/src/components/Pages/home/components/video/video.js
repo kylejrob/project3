@@ -9,6 +9,7 @@ export default class VideoGrid extends React.Component {
             <>
                 <div className = "videoBody"><h1>VIDEOS</h1></div>
                 <Grid container spacing={4}>
+                    
                     <Grid item xs={12}>
                         video1
                     </Grid>
