@@ -5,11 +5,11 @@ const passport = require('../passport')
 
 
 router.get('/', (req, res, next) => {
-  
+
     console.log(req.user)
     if (req.user) {
-    
-       res.json({ user: req.user })
+
+        res.json({ user: req.user })
     } else {
         res.json({ user: null })
     }
@@ -61,17 +61,17 @@ router.post(
         res.json(req.user)
     }
 )
-router.put('/highscore',(req,res) =>{
+router.put('/highscore', (req, res) => {
 
-console.log(req.body);
+    console.log(req.body);
 
-User.findOneAndUpdate({username: req.body.username},{highScore: req.body.score},err=>{
+    User.findOneAndUpdate({ username: req.body.username }, { highScore: req.body.score }, err => {
 
-console.log('hello')
+        console.log('hello')
 
 
 
-})  
+    })
 
 
 })
@@ -93,11 +93,22 @@ router.post('/logout', (req, res) => {
 
 router.get('/scorehigh', (req, res, next) => {
     console.log('high scores')
-console.log(res);
-   
-return User.find().sort({highScore:1})
+    console.log(res);
 
- })
+
+    User.find().sort({ highScore: -1 }).then(data=>{
+        console.log(data);
+        res.json({
+            scores: data
+        })
+    }).catch(error=>{
+        console.log(error);
+        res.send(error);
+
+    })
+       
+    
+})
 
 
 module.exports = router

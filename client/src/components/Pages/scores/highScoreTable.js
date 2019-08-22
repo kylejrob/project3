@@ -28,19 +28,23 @@ export default class ScoreTable extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            scoreHigh: null
+            scoreHigh: []
         }
     };
-    componentDidMount(){
-    
+    componentDidMount() {
+
         this.scoreHigh()
 
     }
 
-    scoreHigh(){
-        axios.get('user/scorehigh').then(response =>{
-      
-            console.log('hi');
+    scoreHigh() {
+        axios.get('user/scorehigh').then(response => {
+
+            console.log(response.data.scores);
+            this.setState({
+                scoreHigh: response.data.scores
+            })
+
 
         })
 
@@ -60,20 +64,31 @@ export default class ScoreTable extends React.Component {
                             <Table>
                                 <TableHead>
                                     <TableRow>
-                                        <StyledTableCell>ID#&nbsp;</StyledTableCell>
-                                        <StyledTableCell> username&nbsp;</StyledTableCell>
-                                        <StyledTableCell>score</StyledTableCell>
+                                        <StyledTableCell>username&nbsp;</StyledTableCell>
+                                        <StyledTableCell> score&nbsp;</StyledTableCell>
+                                        <StyledTableCell></StyledTableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    
-                                                <TableRow >
-                                                    <TableCell></TableCell>
-                                                    <TableCell></TableCell>
-                                                    <TableCell></TableCell>
-                                                </TableRow>
-                                            
-                                    
+                                        <TableRow >
+                                            {this.state.scoreHigh.map(user => (
+                                    <div>
+                                                <TableCell>
+                                                    {user.username}
+
+
+                                                </TableCell>
+                                                
+                                                <TableCell>
+                                                    {user.highScore}
+
+
+                                                </TableCell>
+                                    </div>
+                                                  ))}
+                                        </TableRow> 
+
+
                                 </TableBody>
                             </Table>
 
