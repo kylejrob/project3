@@ -6,7 +6,8 @@ export class Store extends Component {
         super(props)
         this.state = {
             username: props.username,
-            price: 500,
+            shipPrice: 500,
+            bulletPrice: 4000,
             credits: null,
             rSelected: null
         }
@@ -31,15 +32,15 @@ export class Store extends Component {
                     <div>
                         <div>
                             <img></img>
-                            <Button color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>- {this.state.price}cr</Button>
+                            <Button className='blacktext' color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#ffffff', shipOutline: '#ff0000'})} active={this.state.rSelected === 1}>- {this.state.shipPrice}cr</Button>
                         </div>
                         <div>
                         <img></img>
-                        <Button color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#FF8C00', shipOutline: '#ffffff'})} active={this.state.rSelected === 1}>- {this.state.price}cr</Button>
+                        <Button className='blacktext' color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#FF8C00', shipOutline: '#ffffff'})} active={this.state.rSelected === 1}>- {this.state.shipPrice}cr</Button>
                         </div>
                         <div>
                         <img></img>
-                        <Button color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#9400D3', shipOutline: '#7CFC00'})} active={this.state.rSelected === 1}>- {this.state.price}cr</Button>
+                        <Button className='blacktext' color="primary" onClick={() => this.onRadioBtnClick({shipColor: '#9400D3', shipOutline: '#7CFC00'})} active={this.state.rSelected === 1}>- {this.state.shipPrice}cr</Button>
                         </div>
                     </div>
 
@@ -52,7 +53,7 @@ export class Store extends Component {
                             <img></img>
                         </div>
                         <h4>Increase bullet size by 2</h4>
-                        <Button color="danger">- {this.state.price}cr</Button>{' '}
+                        <Button className='blacktext' color="danger">- {this.state.bulletPrice}cr</Button>{' '}
 
                     </div>
                 </div>

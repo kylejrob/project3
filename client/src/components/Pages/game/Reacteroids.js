@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import Ship from './Ship';
 import Asteroid from './Asteroid';
-import { randomNumBetweenExcluding } from './helpers'
+import { randomNumBetweenExcluding } from './helpers';
+import { Redirect } from 'react-router-dom'
+import { Button } from 'react-materialize';
+
+
+
 
 const KEY = {
   LEFT:  37,
@@ -21,6 +26,7 @@ class Reacteroids extends Component {
         width: window.innerWidth,
         height: window.innerHeight,
         ratio: window.devicePixelRatio || 1,
+        redirectTo: null
       },
       context: null,
       keys : {
@@ -41,6 +47,7 @@ class Reacteroids extends Component {
     this.particles = [];
   }
 
+  
   handleResize(value, e){
     this.setState({
       screen : {
@@ -53,12 +60,18 @@ class Reacteroids extends Component {
 
   handleKeys(value, e){
     let keys = this.state.keys;
+    let redirect = null
     if(e.keyCode === KEY.LEFT   || e.keyCode === KEY.A) keys.left  = value;
     if(e.keyCode === KEY.RIGHT  || e.keyCode === KEY.D) keys.right = value;
     if(e.keyCode === KEY.UP     || e.keyCode === KEY.W) keys.up    = value;
     if(e.keyCode === KEY.SPACE) keys.space = value;
+    if(e.keyCode === 72) redirect = '/';
+    if(e.keyCode === 83) redirect = '/store';
+
+
     this.setState({
-      keys : keys
+      keys : keys,
+      redirectTo: redirect
     });
   }
 
@@ -223,6 +236,9 @@ class Reacteroids extends Component {
   }
 
   render() {
+    if (this.state.redirectTo) {
+      return <Redirect to={{ pathname: this.state.redirectTo }} />
+    } else {
     let endgame;
     let message;
 
@@ -254,7 +270,9 @@ class Reacteroids extends Component {
         <span className="score top-score" >Top Score: {this.state.topScore}</span>
         <span className="controls" >
           Use [A][S][W][D] or [←][↑][↓][→] to MOVE<br/>
-          Use [SPACE] to SHOOT
+          Use [SPACE] to SHOOT <br/>
+          Use [H] to RETURN to the HOME SCREEN <br/>
+          Use [S] to VISIT the STORE
         </span>
         <canvas ref="canvas"
           width={this.state.screen.width * this.state.screen.ratio}
@@ -263,6 +281,6 @@ class Reacteroids extends Component {
       </div>
     );
   }
-}
+}}
 
 export default Reacteroids;
