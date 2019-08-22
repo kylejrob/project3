@@ -33,7 +33,7 @@ export default class ScoreTable extends React.Component {
 
     render() {
         return (
-            <body>
+            <>
                 <Grid container spacing={1}>
                     <Grid item xs={4}>
 
@@ -71,7 +71,7 @@ export default class ScoreTable extends React.Component {
                         </div>
                     </Grid>
                 </Grid>
-            </body>
+            </>
         )
     }
 };

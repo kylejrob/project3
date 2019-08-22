@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const apiKey = "AIzaSyD_JTX_wJ4uy_WmMNxsq21dhE0bFkt4hJ0";
+const apiKey = "AIzaSyCou1rS_99RZ66HGwHEiHskLF5Oq1di2l0";
+
 
 export default {
     searchYouTube: function (term) {

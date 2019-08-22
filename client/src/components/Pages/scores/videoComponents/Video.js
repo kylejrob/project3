@@ -24,7 +24,9 @@ class VideoGrid extends Component {
     }
 
 
-
+onVideoSelect = selectedVideo =>{
+this.setState({selectedVideo});
+}
 
 
 
@@ -49,6 +51,7 @@ class VideoGrid extends Component {
                                         video={video} 
                                         key={video.id.videoId}
                                         selectedVideo={this.state.selectedVideo}
+                                        onVideoSelect={this.onVideoSelect}
                                          />
                                     ))}
                                 </VideoList>
