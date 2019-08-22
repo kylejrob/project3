@@ -5,10 +5,10 @@ const passport = require('../passport')
 
 
 router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
+  
     console.log(req.user)
     if (req.user) {
-       console.log('hi') 
+    
        res.json({ user: req.user })
     } else {
         res.json({ user: null })
@@ -61,6 +61,22 @@ router.post(
         res.json(req.user)
     }
 )
+router.put('/highscore',(req,res) =>{
+
+console.log(req.body);
+
+User.findOneAndUpdate({username: req.body.username},{highScore: req.body.score},err=>{
+
+console.log('hello')
+
+
+
+})  
+
+
+})
+
+
 
 
 
@@ -72,5 +88,16 @@ router.post('/logout', (req, res) => {
         res.send({ msg: 'no user to log out' })
     }
 })
+
+
+
+router.get('/scorehigh', (req, res, next) => {
+    console.log('high scores')
+console.log(res);
+   
+return User.find().sort({highScore:1})
+
+ })
+
 
 module.exports = router

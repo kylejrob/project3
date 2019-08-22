@@ -8,6 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import VideoGrid from "./Video"
+import axios from 'axios';
 import Grid from '@material-ui/core/Grid';
 
 
@@ -27,9 +28,26 @@ export default class ScoreTable extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            allscores: scores
+            scoreHigh: null
         }
     };
+    componentDidMount(){
+    
+        this.scoreHigh()
+
+    }
+
+    scoreHigh(){
+        axios.get('user/scorehigh').then(response =>{
+      
+            console.log('hi');
+
+        })
+
+
+
+    }
+
 
     render() {
         return (
@@ -48,16 +66,14 @@ export default class ScoreTable extends React.Component {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {
-                                        this.state.allscores.sort((a, b) => b.score - a.score)
-                                            .map(props => (
-                                                <TableRow key={props.id}>
-                                                    <TableCell>{props.id}</TableCell>
-                                                    <TableCell>{props.username}</TableCell>
-                                                    <TableCell>{props.score}</TableCell>
+                                    
+                                                <TableRow >
+                                                    <TableCell></TableCell>
+                                                    <TableCell></TableCell>
+                                                    <TableCell></TableCell>
                                                 </TableRow>
-                                            ))
-                                    }
+                                            
+                                    
                                 </TableBody>
                             </Table>
 

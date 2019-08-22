@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Ship from './Ship';
 import Asteroid from './Asteroid';
+import axios from 'axios';
 import { randomNumBetweenExcluding } from './helpers'
 
 const KEY = {
@@ -156,11 +157,20 @@ class Reacteroids extends Component {
 
     // Replace top score
     if(this.state.currentScore > this.state.topScore){
+      const userData= {username:localStorage.getItem("username"),score:this.state.currentScore}
+      axios.put('/user/highscore',userData).then(response =>{
+      
+
+
+      })
       this.setState({
         topScore: this.state.currentScore,
       });
-      localStorage['topscore'] = this.state.currentScore;
+     
+
+
     }
+  
   }
 
   generateAsteroids(howMany){

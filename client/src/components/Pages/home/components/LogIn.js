@@ -34,7 +34,8 @@ class LoginForm extends Component {
                 console.log('login response: ')
                 console.log(response)
                 if (response.status === 200) {
-                    console.log('testy')
+                   
+                    localStorage.setItem("username", response.data.username)
                     // update App.js state
                     this.props.updateUser({
                         loggedIn: true,
