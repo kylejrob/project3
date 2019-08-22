@@ -20,7 +20,6 @@ export default class Bullet {
 
   destroy(){
     this.delete = true;
-    console.log("WORDS OF WORDS")
   }
 
   render(state){

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./components/Pages/home/home";
 import { Scores } from "./components/Pages/scores/scores";
 import { Patch } from "./components/Pages/patch/patch";
+import { Store } from "./components/Pages/store/Store"
 import Navbar from "./components/Navbar";
 import Reacteroids from './components/Pages/game/Reacteroids'
 import axios from 'axios';
@@ -103,6 +104,9 @@ class App extends Component {
 								</Route>
 								<Route exact path="/patch">
 									{({ match }) => <Patch show={match !== null} />}
+								</Route>
+								<Route exact path="/store">
+									{({ match }) => <Store show={match !== null} />}
 								</Route>
 							</Switch>
 							</div>
