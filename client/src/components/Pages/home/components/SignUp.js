@@ -57,6 +57,7 @@ class Signup extends Component {
 				modalDisplay: true
 			})
 		} else {
+			localStorage.setItem("username", this.state.username)
 			//request to server to add a new username/password
 			axios.post('/user/', {
 				username: this.state.username,
