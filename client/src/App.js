@@ -35,7 +35,6 @@ class App extends Component {
 		this.updateUser = this.updateUser.bind(this)
 	}
 	componentDidMount() {
-		this.getUser()
 	}
 
 	updateUser(userObject) {
