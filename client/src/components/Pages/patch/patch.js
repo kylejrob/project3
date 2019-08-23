@@ -1,8 +1,6 @@
 import React from "react";
 import { Transition } from "react-transition-group";
 import { TweenLite } from "gsap/all";
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';

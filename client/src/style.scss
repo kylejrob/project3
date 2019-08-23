@@ -11,7 +11,10 @@ body {
     font-family: 'PT Mono', serif;
     //display: none;
 }
-
+.main-video{
+    width:75%;
+    height:300px;
+}
 
 
 .bodygame {
@@ -123,6 +126,10 @@ body {
 }
 .videolist{
   list-style: none; 
+}
+.searchBar{
+   width: 100%; 
+   color:red;
 }
 
 .cardNames:hover {

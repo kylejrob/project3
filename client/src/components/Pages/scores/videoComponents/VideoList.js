@@ -7,11 +7,11 @@ padding:0;
 `
 const ListItem =styled.li`
 img{
-border:${props=> props.active ? "5px solid green" : "3px solid gray"};
+border:${props=> props.active ? "10px solid green" : "10px solid orange"};
 border-radius:10px;
 cursor:pointer;
 :hover{
-    border-color:yellow;
+    border-color:red;
 }
 
 }
