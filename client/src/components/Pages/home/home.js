@@ -77,15 +77,15 @@ export class Home extends Component {
                         <section className="siderbar">
                             <div className="inner">
                                 <div className="clipper">
-                                    <h2>PATCH NOTES:</h2>
+                                    <h2>Project Team Details:</h2>
                                 </div>
                                 <div className="anim-panel">
                                     <ul>
-                                        <li>Ability to change ship color</li>
-                                        <li>Ability to change bullet size</li>
-                                        <li>Added shop to purchase different ships</li>
+                                        <li>Project focuses</li>
+                                        <li>Portfolio links</li>
+                                     
                                     </ul>
-                                    <a href="/patch" className="read-btn">CLICK FOR PATCH NOTES</a>
+                                    <button><a href="/patch" className="read-btn">CLICK HERE</a></button>
                                 </div>
                             </div>
                         </section>
@@ -97,7 +97,7 @@ export class Home extends Component {
 
                                 <div className="anim-panel">
                                     <div>
-                                        <p>high scores</p>
+                                        <p></p>
                                     </div>
                                     <button><a href="/scores" className="cta">CLICK FOR HIGH SCORES</a></button>
                                 </div>

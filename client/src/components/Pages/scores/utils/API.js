@@ -1,6 +1,16 @@
 import axios from "axios";
 
-const apiKey = "AIzaSyD_JTX_wJ4uy_WmMNxsq21dhE0bFkt4hJ0";
+//REMOVE KEY AFTER TEST. Every key stroke uses up the API data quota...
+//...if a valid key is left in "const apiKey"
+
+const apiKey = "AIzaSyCou1rS_99RZ66HGwHEiHskLF5Oq1di2l0";
+//  use this key: AIzaSyCou1rS_99RZ66HGwHEiHskLF5Oq1di2l0
+
+//REMOVE KEY AFTER TEST. Every key stroke uses up the API data quota...
+//...if a valid key is left in "const apiKey"
+
+
+
 
 export default {
     searchYouTube: function (term) {

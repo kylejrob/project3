@@ -7,11 +7,11 @@ padding:0;
 `
 const ListItem =styled.li`
 img{
-border:3px solid gray;
-border-radius:10px;
+border:${props=> props.active ? "10px solid gray" : "10px solid orange"};
+border-radius:3px;
 cursor:pointer;
 :hover{
-    border-color:yellow;
+    border-color:red;
 }
 
 }
@@ -25,10 +25,14 @@ const VideoList = ({children}) => {
 
 
 
-const VideoListItem = ({video,selectedVideo}) => {
+const VideoListItem = ({ video, selectedVideo, onVideoSelect }) => {
     return (
         <ListItem active={video===selectedVideo}>
-          <  img src={video.snippet.thumbnails.medium.url}/>
+          <  img  
+          src={video.snippet.thumbnails.medium.url}
+          alt={video.snippet.title}
+          onClick={() => onVideoSelect(video)}
+          />
         </ListItem>
     )
 }
