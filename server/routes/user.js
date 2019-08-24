@@ -110,5 +110,25 @@ router.get('/scorehigh', (req, res, next) => {
     
 })
 
+router.put('/storeupdate', (req, res, next) => {
+    console.log('store upgrade')
+    console.log(res);
+
+
+    User.update(
+        { "username": req.body.username },{$set: {"shipColor": colors}}).then(data=>{
+        console.log(data);
+        res.json({
+            colors: data
+        })
+    }).catch(error=>{
+        console.log(error);
+        res.send(error);
+
+    })
+       
+    
+})
+
 
 module.exports = router

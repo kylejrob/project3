@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 import { Button } from 'reactstrap'
 
 export class Store extends Component {
@@ -17,9 +18,22 @@ export class Store extends Component {
         // Pass in username from Home state
         // Create a post route that will send username -or- _id to the server and query mongo for user credits info
         // Set state.credits with response
+
+      
     }
 
     onRadioBtnClick(rSelected) {
+        axios.put('user/storeupdate').then(response => {
+
+            console.log(response.data.colors);
+            this.setState({
+                rSelected: response.data.colors
+            })
+
+
+        })
+
+
         this.setState({ rSelected });
       }
 

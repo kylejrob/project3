@@ -27,6 +27,7 @@ class Reacteroids extends Component {
         height: window.innerHeight,
         ratio: window.devicePixelRatio || 1,
         redirectTo: null
+
       },
       context: null,
       keys : {
@@ -38,7 +39,7 @@ class Reacteroids extends Component {
       },
       asteroidCount: 3,
       currentScore: 0,
-      topScore: localStorage['topscore'] || 0,
+      topScore: null,
       inGame: false
     }
     this.ship = [];
@@ -81,7 +82,7 @@ class Reacteroids extends Component {
     window.addEventListener('resize',  this.handleResize.bind(this, false));
 
     const context = this.refs.canvas.getContext('2d');
-    this.setState({ context: context });
+    this.setState({ context: context, topScore: this.props.highScore });
     this.startGame();
     requestAnimationFrame(() => {this.update()});
   }

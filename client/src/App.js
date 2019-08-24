@@ -97,7 +97,7 @@ class App extends Component {
 								</Route>
 
 								<Route  exact path="/game">
-									{({ match }) => <Reacteroids show={match !== null} shipColor={this.state.shipColor} shipOutline={this.state.shipOutline} bulletSize={this.state.bulletSize} />}
+									{({ match }) => <Reacteroids show={match !== null} shipColor={this.state.shipColor} highScore={this.state.highScore} shipOutline={this.state.shipOutline} bulletSize={this.state.bulletSize} />}
 								</Route>
 								<Route exact path="/scores">
 									{({ match }) => <Scores show={match !== null} />}
