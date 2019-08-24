@@ -36,10 +36,13 @@ export const Patch = props => <Transition
         <Grid item xs={12}>
 			<div className="patchNotes">
                         <ul>
-                            <li>Brand New Shop! This is our new feature that will allow registerd users to purchase in-game content.</li><br></br>
-                            <li>Ability to purchase new color ways for your ship! Three colors available from the store. First purchase is FREE!</li><br></br>
-                            <li>Ability to purchase bullet upgrades from the store! Each purchase will increase your bullet size by 2, there is no limit on how many you can buy, only how many you can afford. The first purchase is free, but beware each upgrade is more expensive than the last.</li><br></br>
-                        </ul>
+                            <li>Asteroids is a space-themed multidirectional shooter arcade game, released in November 1979 by Atari. </li><br></br>
+                            <li>The game was rendered on a vector display, in a two-dimensional view that wraps around both screen axes.</li><br></br>
+                            <li>Asteroids was immediately successful upon release. It displaced Space Invaders by popularity in the United States, and became Atari's best-selling arcade game of all time, with over 70,000 units sold. </li><br></br>
+							<li>Asteroids was one of the first major hits of the “Golden Age” of arcade video games. It was popular with players, while influencing a generation of developers. </li><br></br>
+							<li>Asteroids was so popular that some video arcade operators had to install large boxes to hold the number of coins spent by players.</li><br></br>
+							<li>Following the game's success, three “sequels” were introduced over the next eight years: Asteroids Deluxe (1981), Space Duel (1982), and, Blasteroids (1987).</li><br></br>
+						</ul>
 						</div>
         </Grid>
 		<Grid item xs={6}>
@@ -49,11 +52,11 @@ export const Patch = props => <Transition
 					<div className="cardNames">
 					<Typography variant="h5" component="h2">Mike Santarelli</Typography>
 					</div>
-					<Typography color="textSecondary">
-						React Developer
-					</Typography>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat nisl pretium fusce id velit ut tortor pretium. Scelerisque in dictum non consectetur a.</p>
+					
 					<Typography>
+					<p>Built initial stateful ScoreTable component on the High Scores page. 
+							Teamed with Kyle Robinson on Project Details page, to facilitate portfolio access. 
+							Developed the VideoGrid YouTube API component that allows for real-time video searching.</p>
 					</Typography>
 					<CardActions>
 					<div className="portfolioButton">
@@ -72,11 +75,12 @@ export const Patch = props => <Transition
 				<div className="cardNames">
 				<Typography variant="h5" component="h2">Stet Olaye</Typography>
 				</div>
-					<Typography color="textSecondary">
-						React Developer
-					</Typography>
+					
 					<Typography>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis aliquam. Mi quis hendrerit dolor magna eget est lorem ipsum.</p>
+					<p>Developed user validation, utilizing Passport.js . 
+						Teamed with Jeff Fleer to render Reactoids repo, and create MongoDB framework and collections for 
+						user validation, high scores, and preliminary store frameworks. 
+						Adapted initial ScoreTable component for MongoDB interaction. Collaborated on Heroku deployment.  </p>
 					</Typography>
 					<CardActions>
 					<div className="portfolioButton">
@@ -95,11 +99,11 @@ export const Patch = props => <Transition
 					<div className="cardNames">
 					<Typography variant="h5" component="h2">Kyle Robinson</Typography>
 					</div>
-					<Typography color="textSecondary">
-						React Developer
-					</Typography>
+					
 					<Typography>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis aliquam. Mi quis hendrerit dolor magna eget est lorem ipsum.</p>
+					<p>Built out initial React app framework and component trees.Teamed with Mike Santarelli on 
+						Project Details page to facilitate portfolio access, comprehending and driving 
+						Materialize-UI utilization. Multiple deep dives with Jeff Fleer on Heroku deployment. </p>
 					</Typography>
 					<CardActions>
 						<div className="portfolioButton">
@@ -118,11 +122,12 @@ export const Patch = props => <Transition
 				<div className="cardNames">
 					<Typography variant="h5" component="h2">Jeff Fleer</Typography>
 					</div>
-					<Typography color="textSecondary">
-						React Developer
-					</Typography>
+					
 					<Typography>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis aliquam. Mi quis hendrerit dolor magna eget est lorem ipsum.</p>
+					<p>Leading force, with Stet Olaye, on Reactoids render. Teamed with him in that area, 
+						while creating MongoDB framework and collections for user validation, high scores, 
+						and preliminary store frameworks. Multiple deep dives with Kyle Robinson on Heroku. 
+						Developed user ship and weapon attributes for use in the store framework.</p>
 					</Typography>
 					<CardActions>
 					<div className="portfolioButton">

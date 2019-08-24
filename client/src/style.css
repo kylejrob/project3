@@ -7,6 +7,11 @@ body {
   font-family: 'PT Mono', serif;
 }
 
+.main-video {
+  width: 75%;
+  height: 300px;
+}
+
 .bodygame {
   padding: 0;
   margin: 0;
